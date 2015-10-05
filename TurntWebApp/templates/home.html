@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<center>
+
+<form method="POST" action="{{url_for('friends')}}">
+    <input name="dial" id="dial" 
+    type="text" class="dial" data-min="0" data-max="100" data-width="500" data-height="500" data-displayInput=false data-fgColor="#DF3A01">
+    <br>
+    <br>
+    <center>
+    <button class="button" type="submit">Turn Up</button>
+    </center>
+</form>
+
+</center>
+<script>
+    $(function() {
+        $(".dial").knob();
+    });
+</script>
+{% endblock %}
